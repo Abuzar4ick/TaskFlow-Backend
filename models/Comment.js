@@ -37,4 +37,7 @@ const Comment = sequelize.define(
   }
 );
 
+Comment.belongsTo(Task, { foreignKey: "task_id", as: "task" });
+Comment.belongsTo(User, { foreignKey: "user_id", as: "user" });
+
 module.exports = Comment;

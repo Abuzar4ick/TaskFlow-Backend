@@ -45,4 +45,7 @@ const Task = sequelize.define(
   }
 );
 
+Task.belongsTo(Project, { foreignKey: "project_id", as: "project" });
+Task.belongsTo(User, { foreignKey: "assigned_to", as: "assignee" });
+
 module.exports = Task;
