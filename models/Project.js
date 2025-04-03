@@ -6,7 +6,7 @@ const Project = sequelize.define(
   "project",
   {
     title: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(250),
       allowNull: false,
     },
     description: {

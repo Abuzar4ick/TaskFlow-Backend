@@ -22,7 +22,7 @@ const Comment = sequelize.define(
       },
       onDelete: "CASCADE",
     },
-    comment: {
+    content: {
       type: DataTypes.STRING,
       allowNull: false,
     },

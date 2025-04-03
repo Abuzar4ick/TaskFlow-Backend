@@ -7,19 +7,15 @@ const Task = sequelize.define(
   "task",
   {
     title: {
-      type: DataTypes.STRING(50),
+      type: DataTypes.STRING(250),
       allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
     },
     status: {
-      type: DataTypes.STRING(50),
+      type: DataTypes.ENUM('todo', 'in_progress', 'done'),
       defaultValue: "todo",
-    },
-    priority: {
-      type: DataTypes.STRING,
-      defaultValue: "medium",
     },
     project_id: {
       type: DataTypes.INTEGER,

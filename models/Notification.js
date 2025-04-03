@@ -14,7 +14,7 @@ const Notification = sequelize.define(
       onDelete: "CASCADE",
     },
     message: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(250),
       allowNull: false,
     },
     is_read: {
@@ -23,7 +23,6 @@ const Notification = sequelize.define(
     },
     createdAt: {
         type: DataTypes.DATE,
-        allowNull: false,
         defaultValue: DataTypes.NOW,
     },
   },
